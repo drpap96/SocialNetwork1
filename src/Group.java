@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Group extends General_Groups {
 	
-	private  ArrayList<User> members ;  //τα μέλη της ανοιχτής ομάδας.
+	private  ArrayList<User> members ;  //Γ΄Γ΅ Γ¬ΓΓ«Γ§ Γ΄Γ§Γ² Γ΅Γ­Γ―Γ©Γ·Γ΄ΓΓ² Γ―Γ¬ΓΓ¤Γ΅Γ².
 	
-	//Ο ΚΑΤΑΣΚΕΥΑΣΤΗΣ ΠΟΥ ΟΡΙΖΕΙ ΤΟ ΟΝΟΜΑ ΚΑΙ ΤΗΝ ΠΕΡΙΓΡΑΦΗ ΤΗΣ ΑΝΟΙΧΤΗΣ ΟΜΑΔΑΣ.
+	
 	public Group(String name, String description) {
 		nameGroup=name;
 		description=description;
@@ -19,12 +19,12 @@ public class Group extends General_Groups {
 		description=description;
 	}
 	
-	//μέθοδος ελέγχου άν είναι μέλος.
+	
 	public boolean isMember(User u) {
 		return members.contains(u);
 	}
 	
-	//μέθοδος προσθήκης μέλους.
+	.
 	public void addMember(User u) {
 		if (!isMember(u)) {
 			members.add(u);
@@ -34,7 +34,6 @@ public class Group extends General_Groups {
 		}
 	}
 	
-	//μέθοδος εκτυπωσης μελών.
 	public void printMembers() {
 		for (User u: members) {
 			System.out.println(u);

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Group extends General_Groups {
 	
-	private  ArrayList<User> members ;  //ôá ìÝëç ôçò áíïé÷ôÞò ïìÜäáò.
+	private  ArrayList<User> members ;  
 	
 	
 	public Group(String name, String description) {

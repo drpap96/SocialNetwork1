@@ -8,8 +8,7 @@ public class User {
 	private ArrayList<User> friends= new ArrayList<User>();
 	private ArrayList<General_Groups> gp = new ArrayList<>();
 	
-	//κατασκευαστής.
-	
+
 	public User(String name, String email) {
 		this.name = name;
 		this.email = email;
@@ -20,26 +19,25 @@ public class User {
 	public String getName() {
 		return name;
 	}
-	//ΜΕΘΟΔΟΣ ΕΛΕΓΧΟΥ EMAIL.
+	//ΓΓ…ΓΓΓ„ΓΓ“ Γ…Γ‹Γ…ΓƒΓ—ΓΓ• EMAIL.
 	public boolean checkingEmail(String email) {
 		
 		int i,position;
 		String firstChars, lastChars;
 		
-		i=email.length();  //το μήκος του αλφαριθμητικού.το μαχ ειναι 19.το ι=18 
-		firstChars=email.substring(0, 3); //επιστρέφει τους τρείς πρώτους χαρακτήρες.
-		position=email.indexOf("@"); //επιστρέφει την θέση του @.
+		i=email.length();  
+		firstChars=email.substring(0, 3); 
+		position=email.indexOf("@"); 
 		lastChars=email.substring(position);
 		return( (i<=19)&&  ( email.matches("dai(.*)")  || email.matches("ics(.*)")) || email.matches("iis(.*)") && lastChars.matches("@uom.edu.gr") );
 		//return( (i<=19) && (  firstChars.contains("iis")|| firstChars.contains("dai")|| firstChars.contains("ics"))   && (lastChars.contains("@uom.edu.gr")));
 		
 	}
 	
-	//έλεγχος υπαρξης φιλίας.
 	public boolean checkingFriendShip(User user_) {
 		return(friends.contains(user_));
 	}
-	//προσθηκη φιλων
+
 	public void friendList(User user_) {
 		
 		if(!checkingFriendShip(user_)) {
@@ -61,16 +59,14 @@ public class User {
 		
 		
 	}
-	//έλεγχος κοινων φιλων
+
 	public ArrayList<User> matualFriends(User u)    {
-	    ArrayList<User> matual_Friends = new ArrayList<>(); //δημιουργια λίστας για έλεγχο κοινών φίλων.
-	    ArrayList<User> clone_friendList= (ArrayList<User>)friends.clone(); //δημιουργει τον κλόνο 
+	    ArrayList<User> matual_Friends = new ArrayList<>(); //Γ¤Γ§Γ¬Γ©Γ―ΓµΓ±Γ£Γ©Γ΅ Γ«ΓΓ³Γ΄Γ΅Γ² Γ£Γ©Γ΅ ΓΓ«Γ¥Γ£Γ·Γ― ΓªΓ―Γ©Γ­ΓΎΓ­ Γ¶ΓΓ«ΓΉΓ­.
+	    ArrayList<User> clone_friendList= (ArrayList<User>)friends.clone(); //Γ¤Γ§Γ¬Γ©Γ―ΓµΓ±Γ£Γ¥Γ© Γ΄Γ―Γ­ ΓªΓ«ΓΌΓ­Γ― 
 	    clone_friendList.retainAll(u.friends);
 	    return clone_friendList;
 	    	
 	    }
-	
-		
 	
 	public void printFriend() {
 		System.out.println("*******************");
@@ -82,7 +78,6 @@ public class User {
 			System.out.println(i+1 +  " : "+ friends.get(i).getName());
 		}
 		System.out.println("-------------------");
-	}
-	
+	}	
 
 }

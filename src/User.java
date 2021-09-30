@@ -19,7 +19,7 @@ public class User {
 	public String getName() {
 		return name;
 	}
-	//ÌÅÈÏÄÏÓ ÅËÅÃ×ÏÕ EMAIL.
+
 	public boolean checkingEmail(String email) {
 		
 		int i,position;

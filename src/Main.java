@@ -79,33 +79,6 @@ public class Main {
 		g1.addMember(u3);
 		g1.addMember(u2);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		 
 		 
 
 	}
